@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+    <div id="first"></div>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        // reference: https://reactjs.org/docs/handling-events.html
+        class Clock extends React.Component {
+          constructor(props) {
+            super(props);
+            this.state = {date: new Date()};
+
+            // method bind #1 - recommended
+            // this.tick = this.tick.bind(this);
+          }
+          tick() {
+            this.setState({date: new Date().toLocaleString()});
+          }
+          // experimental syntax
+          tick1 = () => {
+            this.setState({date: new Date().toLocaleString()});
+          }
+
+          componentDidMount() {
+            // method bind #1
+            // this.timerId = setInterval(this.tick, 1000);
+            // method bind #2
+            // this.timerId = setInterval(() => this.tick(), 1000);
+            // method bind #3
+            this.timerId = setInterval((e) => this.tick(e), 1000);
+          }
+          componetWillUnmount() {
+            clearInterval(this.timerId);
+          }
+          render() {
+            return <div>Now, the time is {new Date().toLocaleString()}</div>;
+          }
+        }
+
+        ReactDOM.render(<Clock />, document.getElementById("first"));
+    </script>
+
+</body>
+</html>
