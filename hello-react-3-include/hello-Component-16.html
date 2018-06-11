@@ -7,21 +7,27 @@
 </head>
 <body>
 
-    <div id="greeting-div"></div>
+    <div id="greeting-div1"></div>
+    <div id="greeting-div2"></div>
 
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
 
     <script type="text/babel">
+
+        function SimpleGreet(props) {
+            return <div> Hay {props.name}</div>;
+        }
+
         class Greeting extends React.Component {
             render() {
-                return (<p>Hello world</p>);
+                return (<p>Hello, {this.props.name}</p>);
             }
         }
 
-        ReactDOM.render(<Greeting/>, document.getElementById('greeting-div')
-        );
+        ReactDOM.render(<SimpleGreet name="Kishore" />, document.getElementById('greeting-div1'));
+        ReactDOM.render(<Greeting name="Kishore Annam" />, document.getElementById('greeting-div2'));
     </script>
 
 </body>
