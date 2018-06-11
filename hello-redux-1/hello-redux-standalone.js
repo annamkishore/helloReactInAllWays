@@ -18,10 +18,15 @@ let store = redux.createStore(counter);
 
 //-------------consume------i.e subscribe and dispatch------------------------
 
+console.log(`Initial state: ${store.getState()}`);
+
+store.dispatch({type: 'INCREMENT'});
+console.log(`Current state: ${store.getState()}`);
+
 store.subscribe( () => console.log(store.getState()) );
 
-
-store.dispatch({type: 'INCREMENT'});
 store.dispatch({type: 'INCREMENT'});
 store.dispatch({type: 'DECREMENT'});
+
+console.log(`Current state: ${store.getState()}`);
 
