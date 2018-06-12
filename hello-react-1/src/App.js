@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import TreeComponent from './ui/TreeComponent';
+import GridComponent from './ui/GridComponent';
 
 class App extends Component {
   render() {
@@ -13,6 +15,14 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <div className="row">
+            <div className="col-sm-3">
+                <TreeComponent />
+            </div>
+            <div className="col-sm-8">
+                <GridComponent />
+            </div>
+        </div>
       </div>
     );
   }
