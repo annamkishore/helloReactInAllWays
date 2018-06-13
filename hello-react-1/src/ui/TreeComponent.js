@@ -16,7 +16,7 @@ const treeConfig = {
     showTreeRootNode: false, // dont display root node of tree
     columns: [
         {
-            dataIndex: 'category',
+            dataIndex: 'label',
             name: 'Category',
             expandable: true // this will be the column that shows the nested hierarchy
         },
@@ -29,50 +29,50 @@ const treeConfig = {
               {
                   id: 1,
                   parentId: 0,
-                  category: "Read ratio group",
+                  label: "Read ratio group",
                   children: [
                       {
                           id: 12,
                           parentId: 1,
-                          category: "read 1"
+                          label: "read 1"
                       },
                       {
                           id: 13,
                           parentId: 1,
-                          category: "read 2"
+                          label: "read 2"
                       }
                   ]
               },
               {
                   id: 2,
                   parentId: 0,
-                  category: "Write ratio group",
+                  label: "Write ratio group",
                   children: [
                       {
                           id: 22,
                           parentId: 2,
-                          category: "write 1",
+                          label: "write 1",
                       },
                       {
                           id: 23,
                           parentId: 2,
-                          category: "write 2"
+                          label: "write 2"
                       }
                   ]
               },
               {
                   id: 3,
                   parentId: -1,
-                  category: "Random ratio group",
+                  label: "Random ratio group",
                   children: [
                       {
                           id: 32,
                           parentId: 3,
-                          category: "random 1",
+                          label: "random 1",
                       },
                       {
                           id: 33,
-                          category: "random 2",
+                          label: "random 2",
                           parentId: 3
                       }
                   ]
