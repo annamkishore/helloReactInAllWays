@@ -3,7 +3,7 @@
  */
 let INCREMENT = 'INCREMENT'
 let DECREMENT = 'DECREMENT'
-let RESET = 'RESET'
+let LOG_NAME = 'LOG_NAME'
 
 /*
  * action creators
@@ -14,15 +14,15 @@ function increaseIt(text) {
 function decreaseIt(text) {
   return { type: DECREMENT, text }
 }
-function resetIt(text) {
-  return { type: RESET, text }
+function logName(name) {
+  return { type: LOG_NAME, name }
 }
 
 module.exports = {
     INCREMENT,
     DECREMENT,
-    RESET,
+    LOG_NAME,
     increaseIt,
     decreaseIt,
-    resetIt
+    logName
 }

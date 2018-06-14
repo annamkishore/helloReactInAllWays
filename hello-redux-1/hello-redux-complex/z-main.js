@@ -16,7 +16,8 @@ store.dispatch(MathActions.increaseIt('adding more'))
 store.dispatch(MathActions.increaseIt('even more'))
 
 store.dispatch(MathActions.decreaseIt('pop one'))
-store.dispatch(MathActions.resetIt('all clear'))
+store.dispatch(MathActions.logName('kishore'))
+store.dispatch(MathActions.logName('krishna'))
 
 // Stop listening to state updates
 unsubscribe();
