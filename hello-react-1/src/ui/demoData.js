@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const plugins = {
     COLUMN_MANAGER: {
         resizable: true,
@@ -64,7 +62,7 @@ export const plugins = {
                 text: 'Delete',
                 key: 'delete',
                 EVENT_HANDLER: ({ metaData }) => {
-                    const rowIndex = metaData.rowIndex;
+//                    const rowIndex = metaData.rowIndex;
 
 //                    store.dispatch(
 //                        Actions.EditorActions.removeRow({

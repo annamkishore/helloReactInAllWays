@@ -37,10 +37,6 @@ const config1 = {
 };
 
 export default class GridComponent extends Component {
-    constructor(props) {
-        super(props);
-
-    }
     render() {
         console.log(config);
         return (
