@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-//import 'react-sortable-tree/style.css';
-//import SortableTree from 'react-sortable-tree';
+import 'react-sortable-tree/style.css';
+import SortableTree from 'react-sortable-tree';
+//import { SortableTreeWithoutDndContext as SortableTree } from 'react-sortable-tree';
 
 export default class TreeComponentSortable extends Component {
   constructor(props) {
@@ -18,7 +19,9 @@ export default class TreeComponentSortable extends Component {
   render() {
     return (
       <div style={{ height: 300 }}>
-        hello
+        <SortableTree
+              treeData={this.state.treeData}
+              onChange={treeData => this.setState({ treeData })} />
       </div>
     );
   }
