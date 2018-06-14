@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TreeComponent1 from './ui/TreeComponent1';
+import TreeComponent from './ui/TreeComponent';
 import GridComponent from './ui/GridComponent';
 
 class App extends Component {
@@ -17,7 +17,7 @@ class App extends Component {
         </p>
         <div className="row">
             <div className="col-sm-3">
-                <TreeComponent1 />
+                <TreeComponent />
             </div>
             <div className="col-sm-8">
                 <GridComponent />

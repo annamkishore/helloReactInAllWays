@@ -26,5 +26,3 @@ export default class TreeComponent1 extends Component {
     );
   }
 }
-
-//render(<App />, document.getElementById('root'));
