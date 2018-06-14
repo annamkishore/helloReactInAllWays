@@ -16,8 +16,7 @@ store.dispatch(MathActions.increaseIt('adding more'))
 store.dispatch(MathActions.increaseIt('even more'))
 
 store.dispatch(MathActions.decreaseIt('pop one'))
-store.dispatch(MathActions.squareIt('multiplying'))
-store.dispatch(MathActions.cubeIt('cubing'))
+store.dispatch(MathActions.resetIt('all clear'))
 
 // Stop listening to state updates
 unsubscribe();

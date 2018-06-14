@@ -3,8 +3,7 @@
  */
 let INCREMENT = 'INCREMENT'
 let DECREMENT = 'DECREMENT'
-let SQUARE = 'SQUARE'
-let CUBE = 'CUBE'
+let RESET = 'RESET'
 
 /*
  * action creators
@@ -15,20 +14,15 @@ function increaseIt(text) {
 function decreaseIt(text) {
   return { type: DECREMENT, text }
 }
-function squareIt(text) {
-  return { type: SQUARE, text }
-}
-function cubeIt(text) {
-  return { type: CUBE, text }
+function resetIt(text) {
+  return { type: RESET, text }
 }
 
 module.exports = {
     INCREMENT,
     DECREMENT,
-    SQUARE,
-    CUBE,
+    RESET,
     increaseIt,
     decreaseIt,
-    squareIt,
-    cubeIt
+    resetIt
 }

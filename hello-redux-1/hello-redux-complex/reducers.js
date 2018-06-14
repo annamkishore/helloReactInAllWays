@@ -11,23 +11,21 @@ function basicOperations(state = {value: 0, message: ""}, action) {
       return state;
   }
 }
-function advancedOperations(state = {value: 0, message: ""}, action) {
+function moreOperations(state = {value: 0, message: ""}, action) {
   switch (action.type) {
-    case Actions.SQUARE:
-      return Object.assign({}, {value: state.value * state.value, message: action.message});
-    case Actions.CUBE:
-      return Object.assign({}, {value: state.value * state.value * state.value, message: action.message});
+    case Actions.RESET:
+      return Object.assign({}, {value: 0, message: action.message});
     default:
       return state;
   }
 }
 
-const mathApp = Redux.combineReducers({
+const counterApp = Redux.combineReducers({
   basicOperations,
-  advancedOperations
+  moreOperations
 });
 
-module.exports = { mathApp }
+module.exports = { counterApp };
 
 //-------STATE SHAPE
 //{
