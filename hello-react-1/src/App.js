@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TreeComponent from './ui/TreeComponent';
+import TreeComponentRedux from './ui/TreeComponentRedux';
+import TreeComponentSortable from './ui/TreeComponentSortable';
 import GridComponent from './ui/GridComponent';
 
 class App extends Component {
@@ -17,9 +18,12 @@ class App extends Component {
         </p>
         <div className="row">
             <div className="col-sm-3">
-                <TreeComponent />
+                <TreeComponentRedux />
             </div>
-            <div className="col-sm-8">
+            <div className="col-sm-3">
+                <TreeComponentSortable />
+            </div>
+            <div className="col-sm-5">
                 <GridComponent />
             </div>
         </div>
