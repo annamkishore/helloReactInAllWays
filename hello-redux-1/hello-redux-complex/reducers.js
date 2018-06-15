@@ -1,6 +1,7 @@
 const Redux = require("redux");
 const Actions = require('./actions');
 
+// Reducer #1
 function counterOperations(state = {value: 0, message: ""}, action) {
   switch (action.type) {
     case Actions.INCREMENT:
@@ -11,6 +12,8 @@ function counterOperations(state = {value: 0, message: ""}, action) {
       return state;
   }
 }
+
+// Reducer #2
 function logOperation(state = [], action) {
   switch (action.type) {
     case Actions.LOG_NAME:
@@ -20,6 +23,7 @@ function logOperation(state = [], action) {
   }
 }
 
+// Root Reducer
 const counterApp = Redux.combineReducers({
   counterOperations,
   logOperation
@@ -29,6 +33,6 @@ module.exports = { counterApp };
 
 //-------STATE SHAPE
 //{
-//    value: 10,
-//    message: "good morning"
+//    counterOperations: [value: 10, message: "added some value"],
+//    logOperation: ["kishore", "krishna"]
 //}

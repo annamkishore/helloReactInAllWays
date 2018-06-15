@@ -1,5 +1,5 @@
 
-const MathActions = require('./actions');
+const CounterActions = require('./actions');
 
 const store = require('./store');
 
@@ -11,13 +11,15 @@ const unsubscribe = store.subscribe(() =>
 )
 
 // Dispatch some actions
-store.dispatch(MathActions.increaseIt('adding'))
-store.dispatch(MathActions.increaseIt('adding more'))
-store.dispatch(MathActions.increaseIt('even more'))
+store.dispatch(CounterActions.increaseIt('adding'))
+store.dispatch(CounterActions.increaseIt('adding more'))
+store.dispatch(CounterActions.increaseIt('even more'))
 
-store.dispatch(MathActions.decreaseIt('pop one'))
-store.dispatch(MathActions.logName('kishore'))
-store.dispatch(MathActions.logName('krishna'))
+store.dispatch(CounterActions.decreaseIt('pop one'))
+store.dispatch(CounterActions.logName('kishore'))
+store.dispatch(CounterActions.logName('krishna'))
+store.dispatch(CounterActions.logName('Sri'))
+store.dispatch(CounterActions.logName('Hello'))
 
 // Stop listening to state updates
 unsubscribe();
